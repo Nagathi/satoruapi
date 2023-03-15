@@ -19,6 +19,9 @@ public class PersonagemModel {
     private Long codigo;
 
     @Column(nullable = false)
+    private String imagem;
+
+    @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)

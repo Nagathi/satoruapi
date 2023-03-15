@@ -23,4 +23,8 @@ public class PersonagemService {
         return new ResponseEntity<PersonagemModel>(pr.save(pm), HttpStatus.CREATED);
     }
 
+    public ResponseEntity<PersonagemModel> editar_personagens(PersonagemModel pm){
+        return new ResponseEntity<PersonagemModel>(pr.save(pm), HttpStatus.CREATED);
+    }
+
 }
