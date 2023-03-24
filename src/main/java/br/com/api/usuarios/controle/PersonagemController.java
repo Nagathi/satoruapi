@@ -25,6 +25,24 @@ public class PersonagemController {
         return ps.listar_personagens();
     }
 
+    @GetMapping("/buscar_personagem")
+    public PersonagemModel buscar_personagem(String valor){
+        List<PersonagemModel> lista = ps.buscar_personagens();
+        PersonagemModel obj = new PersonagemModel();
+        
+        for(int i = 0; i < lista.size(); i++){
+            if(valor.equals(lista.get(i).getNome())){
+                obj.setCodigo(lista.get(i).getCodigo());
+                obj.setImagem(lista.get(i).getImagem());
+                obj.setNome(lista.get(i).getNome());
+                obj.setAnime(lista.get(i).getAnime());
+                return obj;
+            }
+        }
+
+        return obj;
+    }
+
     @PostMapping("/cadastrar_personagens")
     public ResponseEntity<?> cadastrar_personagens(@RequestBody PersonagemModel pm){
         return ps.cadastrar_personagens(pm);

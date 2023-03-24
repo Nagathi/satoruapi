@@ -31,6 +31,6 @@ public class UsuarioModel {
     private String senha;
 
     @Column(nullable = false)
-    private int tipo;
+    private String tipo;
 
 }

@@ -19,6 +19,10 @@ public class PersonagemService {
         return (List<PersonagemModel>) pr.findAll();
     }
 
+    public List<PersonagemModel> buscar_personagens(){
+        return (List<PersonagemModel>) pr.findAll();
+    }
+
     public ResponseEntity<PersonagemModel> cadastrar_personagens(PersonagemModel pm){
         return new ResponseEntity<PersonagemModel>(pr.save(pm), HttpStatus.CREATED);
     }
