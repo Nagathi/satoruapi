@@ -1,6 +1,7 @@
 package br.com.api.usuarios.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +17,6 @@ public class PersonagemService {
     private PersonagemRepository pr;
 
     public List<PersonagemModel> listar_personagens(){
-        return (List<PersonagemModel>) pr.findAll();
-    }
-
-    public List<PersonagemModel> buscar_personagens(){
         return (List<PersonagemModel>) pr.findAll();
     }
 

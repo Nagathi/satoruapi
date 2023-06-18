@@ -1,5 +1,4 @@
 package br.com.api.usuarios.modelo;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,19 +17,14 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigo;
 
-    @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
     private String email;
     
-    @Column(nullable = false)
     private String usuario;
-
-    @Column(nullable = false)
+    
     private String senha;
 
-    @Column(nullable = false)
     private String tipo;
 
 }
